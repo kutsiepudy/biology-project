@@ -13,11 +13,10 @@
 .content-box {
   margin-top: 10px;
   padding: 15px;
-  background-color: #222;
+  background-color: grey;
   border-radius: 5px;
 }
 
 .research-text {
-  color: white;
   font-family: 'coolAssFont', sans-serif;
 }
