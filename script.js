@@ -3,5 +3,5 @@ document.querySelectAll('.toggle-btn').forEach(button => {
     const targetID = button.getAttribute('data-target');
     const targetDIV = document.getElementById(targetID);
     targetDIV.classList.toggle('hidden');
-  };
+  )};
 });
