@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'coolAssFont';
+  src: url('fonts/coolAssFont.woff2') format('woff2'),
+       url('fonts/coolAssFont2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .hidden {
   display: none;
 }
@@ -11,13 +20,4 @@
 .research-text {
   color: white;
   font-family: 'coolAssFont', sans-serif;
-}
-
-@font-face {
-  font-family: 'coolAssFont';
-  src: url('fonts/coolAssFont.woff2') format('woff2'),
-       url('fonts/coolAssFont2.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
