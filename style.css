@@ -7,6 +7,10 @@
   font-display: swap;
 }
 
+body {
+  font-family: 'coolAssFont', sans-serif;
+}
+
 .hidden {
   display: none;
 }
@@ -15,8 +19,4 @@
   padding: 15px;
   background-color: grey;
   border-radius: 5px;
-}
-
-.research-text {
-  font-family: 'coolAssFont', sans-serif;
 }
