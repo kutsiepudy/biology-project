@@ -1,9 +1,8 @@
 document.querySelectorAll('.toggle-btn').forEach(button => {
   button.addEventListener('click', () => {
-    const targetID = button.getAttribute('data-target');
-    const targetDIV = document.getElementById(targetID);
-    if (targetDIV) {
-      targetDIV.classList.toggle('hidden');
+    const box = button.nextElementSibling;
+    if (box && box.classList.contains('content-box')) {
+      box.classList.toggle('hidden');
     }
   });
 });
