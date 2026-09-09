@@ -9,6 +9,12 @@
 
 body {
   font-family: 'coolAssFont', sans-serif;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: grey;
+  cursor: none;
 }
 
 .hidden {
@@ -17,6 +23,19 @@ body {
 .content-box {
   margin-top: 10px;
   padding: 15px;
-  background-color: grey;
+  background-color: black;
   border-radius: 5px;
+  color: white;
+}
+
+.toggle-btn {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.toggle-btn:hover {
+  color: yellow;
+  transform: translateY(-3px);
+  box-shadow: 
 }
