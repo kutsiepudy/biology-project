@@ -1,10 +1,11 @@
 const cursor = document.getElementById('aquaCursor');
+const cursorAsset = document.getElementById('cursorAsset');
 
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaCurious.png";
 const click = "cursor/aquaWave.gif";
 
-let isHovering = false;
+let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
@@ -20,18 +21,16 @@ document.addEventListener('mouseup', () => {
   cursorAsset.src = hover;
 });
 
-const links = document.querySelectorAll('.hoverable-link');
-
 const links = document.querySelectorAll('.hover-link');
 
 links.forEach(link => {
   link.addEventListener('mouseenter', () => {
     isHoveringLink = true;
-    cursorAsset.src = HOVER_IMG;
+    cursorAsset.src = hover;
   });
-  
+
   link.addEventListener('mouseleave', () => {
     isHoveringLink = false;
-    cursorAsset.src = DEFAULT_IMG;
+    cursorAsset.src = idle;
   });
 });
