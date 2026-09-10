@@ -1,6 +1,5 @@
 const cursor = document.getElementById('aquaCursor');
 const cursorAsset = document.getElementById('cursorAsset');
-
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
