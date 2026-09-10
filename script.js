@@ -1,5 +1,6 @@
 const cursor = document.getElementById('aquaCursor');
 const cursorAsset = document.getElementById('cursorAsset');
+const toggleButtons = document.querySelectorAll('.toggle-btn');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
@@ -31,5 +32,12 @@ links.forEach(link => {
   link.addEventListener('mouseleave', () => {
     isHoveringLink = false;
     cursorAsset.src = idle;
+  });
+});
+
+toggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const contentBox = button.nextElementSibling;
+    contentBox.classList.toggle('hidden');
   });
 });
