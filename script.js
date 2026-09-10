@@ -4,13 +4,14 @@ const toggleButtons = document.querySelectorAll('.toggle-btn');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
+const move = "cursor/aquaHappy"
 
 let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
   if (!isHoveringLink && !document.querySelector(".cursor-container.is-clicking")) {
-    cursorAsset.src = idle;
+    cursorAsset.src = move;
   }
 });
 
