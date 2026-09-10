@@ -7,7 +7,6 @@
   font-display: swap;
 }
 
-/* Base page styles */
 body {
   font-family: 'coolAssFont', system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial, sans-serif;
   background-image: url("background.jpg");
@@ -17,15 +16,13 @@ body {
   background-color: grey;
   margin: 0;
   color: #fff;
-  cursor: none; /* Hidden because we draw a custom cursor */
+  cursor: none;
 }
 
-/* Utility */
 .hidden {
   display: none !important;
 }
 
-/* Content boxes */
 .content-box {
   margin: 10px 16px;
   padding: 15px;
@@ -36,7 +33,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-/* Toggle buttons */
 .toggle-btn {
   display: inline-block;
   margin: 12px 16px 0 16px;
@@ -55,12 +51,10 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-/* Ensure custom cursor is hidden on elements where default is needed */
 html, body, a, button {
   cursor: none !important;
 }
 
-/* Cursor container & graphic */
 .cursor-container {
   position: fixed;
   top: 0;
@@ -90,7 +84,6 @@ html, body, a, button {
   transform: translate3d(-50%, -50%, 0) scale(0.85);
 }
 
-/* Mobile / touch: hide custom cursor and restore default cursors */
 @media (hover: none) {
   .cursor-container {
     display: none !important;
@@ -100,7 +93,6 @@ html, body, a, button {
   }
 }
 
-/* Small accessibility helpers */
 a:focus, button:focus {
   outline: 3px solid rgba(255,234,0,0.65);
   outline-offset: 2px;
