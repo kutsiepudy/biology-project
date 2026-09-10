@@ -9,7 +9,7 @@
 
 body {
   font-family: 'coolAssFont', system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-image: url("background.jpg");
+  background-image: url("background.png");
   background-repeat: repeat;
   background-size: cover;
   background-color: grey;
