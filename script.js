@@ -2,7 +2,7 @@ const cursor = document.getElementById('aquaCursor');
 const cursorAsset = document.getElementById('cursorAsset');
 
 const idle = "cursor/aquaIdle.gif";
-const hover = "cursor/aquaCurious.png";
+const hover = "cursor/aquaHappy.png";
 const click = "cursor/aquaWave.gif";
 
 let isHoveringLink = false;
