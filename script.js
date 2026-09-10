@@ -9,6 +9,9 @@ let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  if (!isHoveringLink && !document.querySelector(".cursor-container.is-clicking")) {
+    cursorAsser.src = idle;
+  }
 });
 
 document.addEventListener('mousedown', () => {
@@ -18,7 +21,7 @@ document.addEventListener('mousedown', () => {
 
 document.addEventListener('mouseup', () => {
   cursor.classList.remove('is-clicking');
-  cursorAsset.src = hover;
+  cursorAsset.src = isHoveringLink ? hover : idle;
 });
 
 const links = document.querySelectorAll('.hover-link');
