@@ -4,7 +4,7 @@ const toggleButtons = document.querySelectorAll('.toggle-btn');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
-const move = "cursor/aquaHappy"
+const move = "cursor/aquaHappy.gif"
 
 let isHoveringLink = false;
 
