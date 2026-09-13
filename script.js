@@ -50,3 +50,10 @@ links.forEach(link => {
     cursorAsset.src = idle;
   });
 });
+
+toggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const contentBox = button.nextElementSibling;
+    contentBox.classList.toggle('hidden');
+  });
+});
