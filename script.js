@@ -32,8 +32,10 @@ playButton.addEventListener('click', () => {
 
   if (songPlaying === true) {
     song.play()
+    playButton.textContent = '🔊'
   } else {
     song.pause()
+    playButton.textContent = '🔇'
   }
 })
 
