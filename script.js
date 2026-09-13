@@ -1,6 +1,8 @@
 const cursor = document.getElementById('aquaCursor');
 const cursorAsset = document.getElementById('cursorAsset');
 const toggleButtons = document.querySelectorAll('.toggle-btn');
+const playButton = document.getElementById("play");
+const links = document.querySelectorAll('.hover-link');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
@@ -24,7 +26,9 @@ document.addEventListener('mouseup', () => {
   cursorAsset.src = isHoveringLink ? hover : idle;
 });
 
-const links = document.querySelectorAll('.hover-link');
+playButton.addEventListener('click', () => {
+  song.play()
+})
 
 links.forEach(link => {
   link.addEventListener('mouseenter', () => {
@@ -37,12 +41,3 @@ links.forEach(link => {
     cursorAsset.src = idle;
   });
 });
-
-toggleButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const contentBox = button.nextElementSibling;
-    contentBox.classList.toggle('hidden');
-  });
-});
-
-song.play();
