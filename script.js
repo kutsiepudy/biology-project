@@ -7,6 +7,7 @@ const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
 const song = new Audio("Who might you be?.mp3");
+let songPlaying = false;
 let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
@@ -27,7 +28,13 @@ document.addEventListener('mouseup', () => {
 });
 
 playButton.addEventListener('click', () => {
-  song.play()
+  songPlaying = true;
+
+  if (songPlaying === true) {
+    song.play()
+  } else {
+    song.pause()
+  }
 })
 
 links.forEach(link => {
