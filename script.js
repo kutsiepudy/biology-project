@@ -6,7 +6,7 @@ const links = document.querySelectorAll('.hover-link');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
-const song = new Audio("Who might you be?.mp3");
+const song = new Audio("WhoMightYouBe.mp3");
 let songPlaying = false;
 let isHoveringLink = false;
 
@@ -28,7 +28,7 @@ document.addEventListener('mouseup', () => {
 });
 
 playButton.addEventListener('click', () => {
-  songPlaying = true;
+  songPlaying = !songPlaying;
 
   if (songPlaying === true) {
     song.play()
