@@ -4,7 +4,7 @@ const toggleButtons = document.querySelectorAll('.toggle-btn');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
-
+const song = new Audio("Who might you be?.mp3");
 let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
@@ -44,3 +44,5 @@ toggleButtons.forEach(button => {
     contentBox.classList.toggle('hidden');
   });
 });
+
+song.play();
