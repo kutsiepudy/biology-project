@@ -2,19 +2,17 @@ const cursor = document.getElementById('aquaCursor');
 const cursorAsset = document.getElementById('cursorAsset');
 const toggleButtons = document.querySelectorAll('.toggle-btn');
 const playButton = document.getElementById("play");
-const links = document.querySelectorAll('.hover-link');
 const idle = "cursor/aquaIdle.gif";
 const hover = "cursor/aquaHappy.gif";
 const click = "cursor/aquaClap.gif";
 const song = new Audio("WhoMightYouBe.mp3");
+song.loop = true;
 let songPlaying = false;
-let isHoveringLink = false;
+let isHoveringInteractive = false;
 
 document.addEventListener('mousemove', (e) => {
-  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-  if (!isHoveringLink && !document.querySelector(".cursor-container.is-clicking")) {
-    cursorAsset.src = idle;
-  }
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
 });
 
 document.addEventListener('mousedown', () => {
@@ -24,37 +22,47 @@ document.addEventListener('mousedown', () => {
 
 document.addEventListener('mouseup', () => {
   cursor.classList.remove('is-clicking');
-  cursorAsset.src = isHoveringLink ? hover : idle;
+  cursorAsset.src = isHoveringInteractive ? hover : idle;
 });
 
 playButton.addEventListener('click', () => {
   songPlaying = !songPlaying;
-
-  if (songPlaying === true) {
-    song.play()
-    song.loop = true
-    playButton.textContent = '🔊'
+  if (songPlaying) {
+    song.play();
+    playButton.textContent = '🔊';
   } else {
-    song.pause()
-    playButton.textContent = '🔇'
+    song.pause();
+    playButton.textContent = '🔇';
   }
-})
+});
 
-links.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    isHoveringLink = true;
+function handleMouseEnter() {
+  isHoveringInteractive = true;
+  cursor.classList.add('is-hovering');
+  if (!cursor.classList.contains('is-clicking')) {
     cursorAsset.src = hover;
-  });
+  }
+}
 
-  link.addEventListener('mouseleave', () => {
-    isHoveringLink = false;
+function handleMouseLeave() {
+  isHoveringInteractive = false;
+  cursor.classList.remove('is-hovering');
+  if (!cursor.classList.contains('is-clicking')) {
     cursorAsset.src = idle;
-  });
+  }
+}
+
+const interactiveElements = [...toggleButtons, playButton];
+interactiveElements.forEach(element => {
+  element.addEventListener('mouseenter', handleMouseEnter);
+  element.addEventListener('mouseleave', handleMouseLeave);
 });
 
 toggleButtons.forEach(button => {
   button.addEventListener('click', () => {
     const contentBox = button.nextElementSibling;
-    contentBox.classList.toggle('hidden');
+    if (contentBox) {
+      contentBox.classList.toggle('hidden');
+    }
   });
 });
