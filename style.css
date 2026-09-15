@@ -64,8 +64,6 @@ html, body, a, button {
   margin-top: -24px;
   pointer-events: none;
   z-index: 99999;
-  transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1); 
-  will-change: transform, left, top;
 }
 
 
@@ -75,14 +73,6 @@ html, body, a, button {
   height: 100%;
   object-fit: contain;
   display: block;
-}
-
-.cursor-container.is-hovering {
-  transform: translate3d(-50%, -50%, 0) scale(1.4);
-}
-
-.cursor-container.is-clicking {
-  transform: translate3d(-50%, -50%, 0) scale(0.85);
 }
 
 @media (hover: none) {
