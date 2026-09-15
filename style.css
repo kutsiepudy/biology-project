@@ -60,12 +60,14 @@ html, body, a, button {
   left: 0;
   width: 48px;
   height: 48px;
-  transform: translate3d(-50%, -50%, 0);
+  margin-left: -24px; 
+  margin-top: -24px;
   pointer-events: none;
   z-index: 99999;
-  transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1); 
+  will-change: transform, left, top;
 }
+
 
 .cursor-graphic,
 #cursorAsset {
