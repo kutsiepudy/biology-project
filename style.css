@@ -87,7 +87,7 @@ html, body, a, button {
 
 a:focus, button:focus {
   outline: 3px solid rgba(0, 0, 0, 1);
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 @media (max-width: 520px) {
