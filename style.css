@@ -85,11 +85,6 @@ html, body, a, button {
   }
 }
 
-a:focus, button:focus {
-  outline: 3px solid rgba(0, 0, 0, 1);
-  outline-offset: 1px;
-}
-
 @media (max-width: 520px) {
   .content-box { margin: 8px; padding: 10px; }
   .toggle-btn { margin-left: 8px; margin-right: 8px; }
