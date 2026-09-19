@@ -11,8 +11,7 @@ let songPlaying = false;
 let isHoveringInteractive = false;
 
 document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
+  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
 });
 
 document.addEventListener('mousedown', () => {
